@@ -4,8 +4,8 @@ php:
  
 before_script: 
    - mv .env.example .env
-   - php artisan key:generate 
    - composer install 
+   - php artisan key:generate 
    - npm install 
    
 script: 
