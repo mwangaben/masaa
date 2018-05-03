@@ -2,4 +2,12 @@ language: php
 php: 
  - 7.1.16 
  
-before_script: composer install
+before_script: 
+   mv .env.example .env
+   php artisan key:generate 
+   composer install 
+   npm install 
+   
+script: 
+  phpunit 
+  npm test   
