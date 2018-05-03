@@ -3,11 +3,11 @@ php:
  - 7.1.16 
  
 before_script: 
-   mv /.env.example .env
-   php artisan key:generate 
-   composer install 
-   npm install 
+   - mv /.env.example .env
+   - php artisan key:generate 
+   - composer install 
+   - npm install 
    
 script: 
-  phpunit 
-  npm test   
+ - phpunit 
+ - npm test   
